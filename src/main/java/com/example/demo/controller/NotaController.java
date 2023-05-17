@@ -26,13 +26,13 @@ public class NotaController {
         return not;
     }
 
-    @GetMapping("notas")
+    @GetMapping("/notas")
     public List<Nota> getNotas(){
         List<Nota> nota = repository.findAll();
         return nota;
     }
 
-    @PostMapping("new")
+    @PostMapping("/new")
     public Nota postNota(@RequestBody Nota nota){
         repository.save(nota);
         return nota;

@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.math.BigDecimal;
 
 @Entity
 public class Produto {
@@ -15,7 +16,7 @@ public class Produto {
 
     private String descricao;
 
-    private Integer valor_Unitario;
+    private BigDecimal valorUnitario;
 
 
     public Integer getId() {
@@ -42,11 +43,12 @@ public class Produto {
         this.descricao = descricao;
     }
 
-    public Integer getValor_Unitario() {
-        return valor_Unitario;
+    public BigDecimal getValorUnitario() {
+        return valorUnitario;
     }
 
-    public void setValor_Unitario(Integer valor_Unitario) {
-        this.valor_Unitario = valor_Unitario;
+    public void setValorUnitario(BigDecimal valorUnitario) {
+        this.valorUnitario = valorUnitario;
     }
 }
+

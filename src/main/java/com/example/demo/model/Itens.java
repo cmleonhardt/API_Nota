@@ -1,6 +1,7 @@
 package com.example.demo.model;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 
 @Entity
 public class Itens {
@@ -11,9 +12,11 @@ public class Itens {
 
     // sequenciador
 
+    private Integer numeroDoItem;
+
     private Integer quantidade;
 
-    private Integer valorTotalDoItem;
+    private BigDecimal valorTotalDoItem;
 
     @ManyToOne
     private Produto produto;
@@ -43,11 +46,19 @@ public class Itens {
         this.quantidade = quantidade;
     }
 
-    public Integer getValorTotalDoItem() {
+    public BigDecimal getValorTotalDoItem() {
         return valorTotalDoItem;
     }
 
-    public void setValorTotalDoItem(Integer valorTotalDoItem) {
+    public void setValorTotalDoItem(BigDecimal valorTotalDoItem) {
         this.valorTotalDoItem = valorTotalDoItem;
+    }
+
+    public Integer getNumeroDoItem() {
+        return numeroDoItem;
+    }
+
+    public void setNumeroDoItem(Integer numeroDoItem) {
+        this.numeroDoItem = numeroDoItem;
     }
 }
