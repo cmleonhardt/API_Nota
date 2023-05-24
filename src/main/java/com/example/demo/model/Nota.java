@@ -2,6 +2,7 @@ package com.example.demo.model;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 public class Nota {
@@ -17,8 +18,9 @@ public class Nota {
     @ManyToOne
     private Cliente cliente;
 
-    @ManyToOne
-    private Itens itens;
+    @OneToMany(mappedBy = "nota", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Itens> itens;
+
 
 
 
@@ -54,11 +56,13 @@ public class Nota {
         this.cliente = cliente;
     }
 
-    public Itens getItens() {
+    public List<Itens> getItens() {
         return itens;
     }
 
-    public void setItens(Itens itens) {
+    public void setItens(List<Itens> itens) {
         this.itens = itens;
     }
+
+
 }

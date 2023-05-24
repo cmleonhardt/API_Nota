@@ -17,18 +17,6 @@ public class Cliente {
 
     private String nome;
 
-//
-//    public Cliente(){
-//
-//    }
-//
-//    public Cliente ( Integer id,String codigo, String nome){
-//        this.id = id;
-//        this.codigo = codigo;
-//        this.nome = nome;
-//    }
-//
-
 
     public Integer getId() {
         return id;

@@ -14,20 +14,18 @@ public class Itens {
 
     private Integer numeroDoItem;
 
-    private Integer quantidade;
+    private BigDecimal quantidade;
 
     private BigDecimal valorTotalDoItem;
 
     @ManyToOne
     private Produto produto;
+
     @ManyToOne
     private Nota nota;
 
 
 
-    public Itens() {
-
-    }
 
     public Integer getId() {
         return id;
@@ -38,11 +36,11 @@ public class Itens {
     }
 
 
-    public Integer getQuantidade() {
+    public BigDecimal getQuantidade() {
         return quantidade;
     }
 
-    public void setQuantidade(Integer quantidade) {
+    public void setQuantidade(BigDecimal quantidade) {
         this.quantidade = quantidade;
     }
 
@@ -60,5 +58,21 @@ public class Itens {
 
     public void setNumeroDoItem(Integer numeroDoItem) {
         this.numeroDoItem = numeroDoItem;
+    }
+
+    public Produto getProduto() {
+        return produto;
+    }
+
+    public void setProduto(Produto produto) {
+        this.produto = produto;
+    }
+
+    public Nota getNota() {
+        return nota;
+    }
+
+    public void setNota(Nota nota) {
+        this.nota = nota;
     }
 }
