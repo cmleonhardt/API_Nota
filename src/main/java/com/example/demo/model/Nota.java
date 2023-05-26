@@ -24,6 +24,7 @@ public class Nota {
 
 
 
+
     public Integer getId() {
         return id;
     }
@@ -63,6 +64,5 @@ public class Nota {
     public void setItens(List<Itens> itens) {
         this.itens = itens;
     }
-
 
 }

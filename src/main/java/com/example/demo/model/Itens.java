@@ -35,6 +35,13 @@ public class Itens {
         this.id = id;
     }
 
+    public Integer getNumeroDoItem() {
+        return numeroDoItem;
+    }
+
+    public void setNumeroDoItem(Integer numeroDoItem) {
+        this.numeroDoItem = numeroDoItem;
+    }
 
     public BigDecimal getQuantidade() {
         return quantidade;
@@ -52,14 +59,6 @@ public class Itens {
         this.valorTotalDoItem = valorTotalDoItem;
     }
 
-    public Integer getNumeroDoItem() {
-        return numeroDoItem;
-    }
-
-    public void setNumeroDoItem(Integer numeroDoItem) {
-        this.numeroDoItem = numeroDoItem;
-    }
-
     public Produto getProduto() {
         return produto;
     }
@@ -75,4 +74,5 @@ public class Itens {
     public void setNota(Nota nota) {
         this.nota = nota;
     }
+
 }

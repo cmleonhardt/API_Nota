@@ -15,7 +15,7 @@ public class ItensController {
     @Autowired
     private ItensRepository repository;
 
-    @GetMapping("{id}")
+    @GetMapping("/{id}")
     public Itens getItem(@PathVariable Optional<Itens> id){
         Itens item = new Itens();
         Optional<Itens> it = Optional.ofNullable(repository.findById(id));
@@ -26,19 +26,20 @@ public class ItensController {
     }
 
     @GetMapping("/itens")
-    public List<Itens> getItens(){
+    public List<Itens> getItens() {
         List<Itens> it = repository.findAll();
         return it;
     };
 
-    @PostMapping("new")
+    @PostMapping("/new")
     public Itens postItens(@RequestBody Itens itens){
         repository.save(itens);
         return itens;
     }
 
-    @DeleteMapping("id")
+    @DeleteMapping("/{id}")
     public void deleteItens(@PathVariable Integer id){
+
         repository.deleteById(id);
     }
 
