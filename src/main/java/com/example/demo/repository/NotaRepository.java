@@ -12,6 +12,4 @@ public interface NotaRepository extends JpaRepository<Nota, Integer> {
     List<Nota> findAll();
 
 
-    Nota findById(Optional<Nota> id);
-
 }
